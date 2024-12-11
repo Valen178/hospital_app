@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ManagePersonalActivity"
+    android:background="@drawable/fondo1">
+
+    <TextView
+        android:id="@+id/tvBienvenidaPersonal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="25dp"
+        android:text="Bienvenido al manejo del personal"
+        app:layout_constraintBottom_toTopOf="@+id/btnAgregarPersonal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+    android:id="@+id/btnAgregarPersonal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Agregar Personal"
+    android:backgroundTint="@color/blue"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/tvBienvenidaPersonal"
+    app:layout_constraintBottom_toTopOf="@+id/rvPersonal"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPersonal"
+        android:layout_width="match_parent"
+        android:layout_height="575dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAgregarPersonal" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
